@@ -60,6 +60,20 @@ public class Museum {
         this.museum_info=museum_info;
     }
 
+    public void update(String museum_name, String museum_phone, String museum_addr, String museum_web, String museum_open,
+                       String museum_close, double museum_lat, double museum_lon, String museum_info) {
+
+        this.museum_name=museum_name;
+        this.museum_phone=museum_phone;
+        this.museum_addr=museum_addr;
+        this.museum_web=museum_web;
+        this.museum_open=museum_open;
+        this.museum_close=museum_close;
+        this.museum_lat=museum_lat;
+        this.museum_lon=museum_lon;
+        this.museum_info=museum_info;
+    }
+
 
 
 }
