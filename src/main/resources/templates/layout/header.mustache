@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>스프링부트 미술관</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fixheader.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div width="100%" class="bgcover">
+<div class="header">
+    <div class="inner">
+  <div>
+    <h1><a href="/index"><img src="/images/blacklogo.png" alt="메인으로" title="메인으로"></a></h1>
+  </div>
+        <div class="gnb">
+            <ul>
+                <li><span>이용안내</span><div></div>
+                            <ul>
+                                <li><a href="#">찾아오시는 길</a></li>
+                                <li><a href="#">관람 예약</a></li>
+                                <li><a href="#">주변 편의시설</a></li>
+                            </ul>
+                </li>
+                <li><span>참여</span><div></div>
+                    <ul>
+                        <li><a href="#">관리자에게 메일 보내기</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </li>
+                <li><span>소장품</span></li>
+                <li><span>미술관 정보</span></li>
+                <li><span>전시</span><div></div>
+                            <ul>
+                                <li><a href="abcstory.html">현재전시</a></li>
+                                <li><a href="businessresults.html">지난전시</a></li>
+                                <li><a href="directions.html">예정전시</a></li>
+                            </ul>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+//슬라이드 네비게이션
+jQuery(function(){
+jQuery(".sub").hide();
+jQuery(".gnb>ul>li").hover(function(){
+jQuery(this).find(".sub").stop().slideDown();
+},function(){
+jQuery(this).find(".sub").stop().slideUp();
+})
+});
+</script>
