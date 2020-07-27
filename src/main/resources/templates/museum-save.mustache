@@ -1,0 +1,31 @@
+<!doctype html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>미술관 등록</legend>
+        미술관명: <input type="text" id="museum_name" /> <br>
+        연락처: <input type="text" id="museum_phone" /> <br>
+        주소: <input type="text" id="museum_addr" /> <br>
+        홈페이지: <input type="url" id="museum_web" /> <br>
+        운영시간: <input type="text" id="museum_open" /> <br>
+        휴관일: <input type="text" id="museum_close" /> <br>
+        GPS: 위도<input type="text" id="museum_lat" /> 경도<input type="text" id="museum_lon" /> <br>
+        정보:<br>
+        <textarea id="museum_info" ></textarea>
+    </fieldset>
+</form>
+    <a href="/museum/list" type="button" role="button" >목록으로</a>
+    <button type="button" id="btn-museum-save" >등록</button>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+<script src="/js/app/museum.js" ></script>
+</body>
+</html>
