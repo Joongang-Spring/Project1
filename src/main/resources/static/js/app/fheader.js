@@ -10,6 +10,9 @@ $( function () {
         var $window = $( window ), 
             $header = $( this ),
             $h1 = $('h1'), $divul = $('.gnb>ul'),
+            $logo = $('.logo')
+            $sptext = $('.gnb>ul>li>span')
+            $whline = $('.boxcarousel1>hr')
             // 헤더 기본 위치 검색
             headerOffsetTop = $header.offset().top;
 
@@ -23,10 +26,15 @@ $( function () {
                 $header.addClass( 'hdtop' );
                 $h1.css("margin-top","15px").css("transition","margin-top 0.5s ease 0.1s");
                 $divul.css("margin-top","30px").css("transition","margin-top 0.1s ease 0s");
+                $logo.attr("src","/images/whitelogo.png");
+                $sptext.css("color","white").css("transition","all 1s ease-out 0s");
+
             } else {    // 그렇지 않으면 삭제
                 $header.removeClass( 'hdtop' );
                 $h1.css("margin-top","24px").css("transition","margin-top 0.5s ease 0.1s");
                 $divul.css("margin-top","39px").css("transition","margin-top 0.1s ease 0s");
+                $logo.attr("src","/images/blacklogo.png");
+                $sptext.css("color","black").css("transition","all 1s ease-out 0s");
             }
         } );
 

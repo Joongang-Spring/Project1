@@ -10,21 +10,31 @@ width:100%;
 font-family: "Noto Sans KR", sans-serif;
 font-size: 12pt;
 }
-
-.bgcover {
-      background-image: url('/images/bg4.jpg');
-      background-size: cover;
+/*.bgcover {
+    float:left;
+    background-image: url('/images/bg4.jpg');
+    background-size: cover;
     width: 100%;
     height: 100%;
     min-height: 100vh;
     margin:0 auto;
-}
-.header {width:960px; height:87px; margin:0 auto;}
+}*/
+
+.carousel-item { height:100vh; }
+.carousel-inner {width:100%; text-align: center; }
+.carousel-tit1 { font-size:50pt; font-family: "Noto Sans KR", sans-serif; font-weight:900; float:left; position:relative; top:300px; z-index:999999;}
+.bgcontainer { width:960px; margin:0 auto;}
+.header {width:960px; height:87px; margin:0 auto; z-index:99999; position: fixed; float:left; }
 .header h1 {float: left; margin: 24px 15px 0 0;}
 .header h1 img {vertical-align: top; width: 220px; height: 63px;}
+.carousel-caption { width:960px;text-align:left; color:#000; margin:0 auto 50px;}
+.carousel-caption h5 { opacity:0; position:relative; color:#ffffff; font-size:30pt; font-weight:900;}
+.carousel-caption p { margin-top:15px; color:#ffffff; font-size:15pt; font-weight:200;}
+.boxcarousel1{ width:300px; left:50px;  }
+.boxcarousel3{ width:500px; }
 
-
-.gnb>ul { float:right;
+.gnb>ul {
+    float:right;
     margin-top: 39px;
     height: 15px;
     width: 500px;
@@ -47,23 +57,17 @@ text-underline-position: under;
 .gnb>ul>li>span {}
 .gnb>ul>li>span:hover {color:white; font-weight:bold; transition: all 1s ease-out 0s;}
 .gnb li ul {
-
+    background: #ffffff;
     display: none;
-    /* 평상시에는 드랍메뉴가 안보이게 하기 */
     height: auto;
     padding: 0px 0 0 0;
     border: 0px;
     position: absolute;
     width: 200px;
     z-index: 200;
-    /*top:1em;
-/*left:0;*/
 }
-.gnb li:hover ul {
-    background: #ffffff;
-    display: block;
-}
-.gnb li li {    margin-top: 10px;
+.gnb li li {
+    margin-top: 10px;
     display: block;
     margin: 0px;
     padding: 0px;
@@ -71,6 +75,7 @@ text-underline-position: under;
     height: 35px;
 }
 .gnb li ul a {
+    color:#5d50be;
     display: block;
     height: 30px;
     font-family: "Noto Sans KR", sans-serif;
@@ -79,9 +84,28 @@ text-underline-position: under;
     padding: 7px 0px 0px 10px;
     text-align: left;
 }
-
+.gnb li ul a:hover {
+    color:#0984E3;
+    font-weight:bold;
+    }
 .gnb li li li:hover a {
     color: #277bc0;
     font-weight:bold;
 }
+
+
+p.result1,p.result2{ display: inline;}
+p.cursor {animation: cursor 0.4s infinite;}
+
+ @keyframes cursor{
+      0%{border-right: 1px solid #fff}
+      50%{border-right: 1px solid #ccc}
+      100%{border-right: 1px solid #fff}
+    }
+
+.fparent { width:100%; height:85px; background-color:#555555; margin:0 auto;}
+.footer {margin:0 auto; position:relative; top:22px; font-size:9pt; font-family:verdana; width:960px; color:#bbbbbb;}
+.footer span {font-family: "Noto Sans KR", sans-serif; margin-bottom:12px; display:inline-block; line-height:13px; text-align:left; font-size:10pt; color:#eeeeee;}
+.verticalbar {font-size:9pt; color:#bbbbbb!important; vertical-align:top;}
+
 
