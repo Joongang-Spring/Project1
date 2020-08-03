@@ -8,13 +8,33 @@
     <title>Document</title>
 </head>
 <body>
-<a href="/museum/save" role="button" >박물관등록</a> <br>
+<a href="/museum/save" role="button" >미술관 등록</a> <br>
 <h3>미술관 리스트</h3>
 <br>
 <form>
-<table>
-
-
+<table border="1">
+    <thead>
+        <tr>
+            <th>번호</th>
+            <th>미술관 명</th>
+            <th>홈페이지</th>
+            <th>연락처</th>
+            <th>전시1</th>
+            <th>전시2</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+    {{#museums}}
+        <tr>
+            <td>{{museum_id}}</td>
+            <td>{{museum_name}}</td>
+            <td>{{museum_web}}</td>
+            <td>{{museum_phone}}</td>
+            <td>전시 1</td>
+            <td>전시 2</td>
+        </tr>
+    {{/museums}}
+    </tbody>
 </table>
 </form>
 </body>

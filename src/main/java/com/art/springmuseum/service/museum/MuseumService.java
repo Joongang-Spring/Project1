@@ -2,12 +2,16 @@ package com.art.springmuseum.service.museum;
 
 import com.art.springmuseum.domain.museums.Museum;
 import com.art.springmuseum.domain.museums.MuseumRepository;
+import com.art.springmuseum.web.dto.MuseumListResponseDto;
 import com.art.springmuseum.web.dto.MuseumResponseDto;
 import com.art.springmuseum.web.dto.MuseumSaveRequestDto;
 import com.art.springmuseum.web.dto.MuseumUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  *  MuseumApiController 에서 온 요청을 DB에서 처리하는 클래스
@@ -44,10 +48,21 @@ public class MuseumService {
         return museum_id;
     }
 
+
+    // 미술관 id로 정보 꺼내기
     public MuseumResponseDto findById (int museum_id) {
         Museum entity = museumRepository.findById(museum_id).orElseThrow(() ->
                 new IllegalArgumentException("해당 박물관 정보가 없습니다. id=" + museum_id));
 
         return new MuseumResponseDto(entity);
     }
+
+    // 미술관 목록 조회
+    @Transactional(readOnly = true)
+    public List<MuseumListResponseDto> findAllDesc() {
+        return museumRepository.findAllDesc().stream()
+                .map(MuseumListResponseDto::new)
+                .collect(Collectors.toList());
+    }
+
 }

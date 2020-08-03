@@ -1,14 +1,20 @@
 package com.art.springmuseum.web;
 
+import com.art.springmuseum.service.museum.MuseumService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  *  url 요청받아 페이지 이동시켜주는 클래스
  * @author ojjang
  */
+@RequiredArgsConstructor
 @Controller
 public class IndexController {
+
+    private final MuseumService museumService;
 
     @GetMapping("/")
     public String index() {
@@ -16,7 +22,8 @@ public class IndexController {
     }
 
     @GetMapping("/museum/list")
-    public String museumList() {
+    public String museumList(Model model) {
+        model.addAttribute("museums", museumService.findAllDesc());
         return "museum-list";
     }
 
